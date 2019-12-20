@@ -8,17 +8,14 @@ public class ProductCount {
         Scanner cherpreng = new Scanner(System.in);
         ArrayList<Integer> box = new ArrayList<Integer>(); // Create an ArrayList object
         int receive = 0;
-        while(receive != -1)
-        {
+        while (receive != -1) {
             receive = cherpreng.nextInt();
             box.add(receive);
         }
-        box.remove(box.size()-1);
+        box.remove(box.size() - 1);
         int count = 0;
-        for (int i : box)
-        {
-            if(i > 10)
-            {
+        for (int i : box) {
+            if (i > 10) {
                 count++;
             }
         }

@@ -7,11 +7,9 @@ public class ProductSumV2 {
         Scanner janis = new Scanner(System.in);
         int fall = 0;
         int answer = 0;
-        while (fall != -1)
-        {
+        while (fall != -1) {
             fall = janis.nextInt();
-            if( fall != -1)
-            {
+            if (fall != -1) {
                 answer = fall + answer;
             }
         }

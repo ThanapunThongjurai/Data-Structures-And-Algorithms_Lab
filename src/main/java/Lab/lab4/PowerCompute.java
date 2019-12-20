@@ -1,21 +1,24 @@
 package Lab.lab4;
+
 import java.util.Scanner;
+
 public class PowerCompute {
+
     public static void main(String[] args) {
-        Scanner FAII = new Scanner(System.in);
-        int a = FAII.nextInt();
-        int b = FAII.nextInt();
+        Scanner faii = new Scanner(System.in);
+        int a = faii.nextInt();
+        int b = faii.nextInt();
         //System.out.println(Mpow(5,a));
-        System.out.println(Mpow(5,a)+Mpow(3,b));
+        System.out.println(mpow(5, a) + mpow(3, b));
 
     }
-    static int Mpow(int y,int x)
-    {
+
+    private static int mpow(int y, int x) {
         int answer = 1;
-        for(int i = 1 ; i <= x; i++)
-        {
-            answer = answer *y;
+        for (int i = 1; i <= x; i++) {
+            answer = answer * y;
         }
         return answer;
     }
+
 }

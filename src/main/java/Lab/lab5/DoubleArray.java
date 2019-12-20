@@ -14,8 +14,7 @@ public class DoubleArray {
             answer[i] = 0;
         }
 
-        for(int i = 0 ; i < answer.length;i++)
-        {
+        for (int i = 0; i < answer.length; i++) {
             System.out.printf("%d", answer[i]);
         }
 

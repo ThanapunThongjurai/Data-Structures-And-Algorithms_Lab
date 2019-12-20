@@ -7,11 +7,9 @@ public class ProductCountV2 {
         Scanner janis = new Scanner(System.in);
         int fall = 0;
         int answer = 0;
-        while (fall != -1)
-        {
+        while (fall != -1) {
             fall = janis.nextInt();
-            if( fall > 10)
-            {
+            if (fall > 10) {
                 answer++;
             }
         }

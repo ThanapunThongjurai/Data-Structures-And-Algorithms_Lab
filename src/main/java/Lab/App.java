@@ -24,6 +24,6 @@ public class App {
 
         //new SumArray().sumTwo(itest);
 
-        new GenerateArrayI().gen(3,1);
+        new GenerateArrayI().gen(3, 1);
     }
 }

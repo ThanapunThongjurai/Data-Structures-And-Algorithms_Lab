@@ -8,12 +8,11 @@ public class ProductSum {
         ArrayList<Integer> box = new ArrayList<Integer>(); // Create an ArrayList object
         Scanner fond = new Scanner(System.in);
         int receive = 0;
-        while (receive != -1)
-        {
+        while (receive != -1) {
             receive = fond.nextInt();
             box.add(receive);
         }
-        box.remove(box.size()-1);
+        box.remove(box.size() - 1);
         /*
         do
         {
@@ -22,14 +21,13 @@ public class ProductSum {
         }while (receive != -1);
         */
         int answer = 0;
-        for(int i : box)
-        {
+        for (int i : box) {
             answer = answer + i;
         }
         System.out.println(answer);
     }
-    void Summy(int n)
-    {
+
+    void Summy(int n) {
 
     }
 }
