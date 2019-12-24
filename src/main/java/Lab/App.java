@@ -2,6 +2,7 @@ package Lab;
 
 import Lab.lab4.Count3;
 import Lab.lab5.*;
+import Lab.lab6.Arraylist.Arraylist;
 
 /**
  * Hello world!
@@ -24,6 +25,14 @@ public class App {
 
         //new SumArray().sumTwo(itest);
 
-        new GenerateArrayI().gen(3, 1);
+        //new GenerateArrayI().gen(3, 1);
+
+        Arraylist arr = new Arraylist();
+        for (int i = 0; i < 5; i++) {
+            arr.add(i,i);
+        }
+        arr.printfArr();
+        System.out.println("\n"+arr.getLength());
+
     }
 }
