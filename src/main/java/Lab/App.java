@@ -39,7 +39,9 @@ public class App {
         for(int i = 0 ; i < itest.length ; i++)
         {
             temp[i] = itest[i];
+            //System.out.println(temp[i]);
         }
+
         arr.addArr(temp);
         arr.printfArr();
         System.out.println("size getLength "+arr.getLength());

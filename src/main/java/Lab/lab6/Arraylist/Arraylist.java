@@ -27,7 +27,7 @@ public class Arraylist {
     //Arr Arraylist
     public void addArr(Object[] e) {
         Cap(e.length);
-        for (int i = Length; i < elementData.length; i++) {
+        for (int i = Length; i < Length+e.length; i++) {
             elementData[i] = e[i-Length];
         }
         Length = Length + e.length;
@@ -53,7 +53,7 @@ public class Arraylist {
     }
 
     public void printfArr() {
-        for (int i = 0; i < elementData.length; i++) {
+        for (int i = 0; i < Length; i++) {
             System.out.println(elementData[i]);
         }
     }
