@@ -31,8 +31,18 @@ public class App {
         for (int i = 0; i < 5; i++) {
             arr.add(i,i);
         }
-        arr.printfArr();
-        System.out.println("\n"+arr.getLength());
 
+        //arr.remove(0);
+
+
+        Object[] temp = new Object[itest.length];
+        for(int i = 0 ; i < itest.length ; i++)
+        {
+            temp[i] = itest[i];
+        }
+        arr.addArr(temp);
+        arr.printfArr();
+        System.out.println("size getLength "+arr.getLength());
+        // + arr.elementData.toString()
     }
 }

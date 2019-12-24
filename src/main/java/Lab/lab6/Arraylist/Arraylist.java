@@ -24,6 +24,26 @@ public class Arraylist {
         }
     }
 
+    //Arr Arraylist
+    public void addArr(Object[] e) {
+        Cap(e.length);
+        for (int i = Length; i < elementData.length; i++) {
+            elementData[i] = e[i-Length];
+        }
+        Length = Length + e.length;
+    }
+
+    private void Cap(int x) {
+        Object[] temp = new Object[x+elementData.length];
+        for (int i = 0; i < Length; i++) {
+            temp[i] = elementData[i];
+        }
+        elementData = temp;
+    }
+
+    //NEW arraaylist static var
+
+
     public void remove(int i) {
         for (int j = i; j < Length - 1; j++) {
             elementData[j] = elementData[j + 1];
@@ -33,7 +53,7 @@ public class Arraylist {
     }
 
     public void printfArr() {
-        for (int i = 0; i < Length; i++) {
+        for (int i = 0; i < elementData.length; i++) {
             System.out.println(elementData[i]);
         }
     }
