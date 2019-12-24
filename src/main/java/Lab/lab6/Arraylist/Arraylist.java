@@ -4,6 +4,37 @@ public class Arraylist {
     private Object[] elementData = new Object[1];
     private int Length = 0;
 
+    //NEW arraaylist static var
+
+    public void add(Object e) {
+        cap_var(Length +1);
+        elementData[Length] = e;
+        Length++;
+    }
+
+    public void add(int x, Object e) {
+        cap_var(x+1);
+        for (int j = Length - 1; j >= x; j--) {
+            elementData[j + 1] = elementData[j];
+        }
+        elementData[x] = e;
+        Length++;
+
+
+    }
+
+    public void cap_var(int x)
+    {
+        if(Length < x)
+        {
+            Object[] temp = new Object[x];
+            for (int i = 0; i < Length; i++) {
+                temp[i] = elementData[i];
+            }
+            elementData = temp;
+        }
+    }
+    /*
     public void add(int i, Object e) {
         ensureCapacity(Length + 1);
         for (int j = Length - 1; j >= i; j--) {
@@ -23,25 +54,25 @@ public class Arraylist {
             elementData = arr;
         }
     }
+    */
+
 
     //Arr Arraylist
     public void addArr(Object[] e) {
-        Cap(e.length);
-        for (int i = Length; i < Length+e.length; i++) {
-            elementData[i] = e[i-Length];
+        cap_var_arr(e.length);
+        for (int i = Length; i < Length + e.length; i++) {
+            elementData[i] = e[i - Length];
         }
         Length = Length + e.length;
     }
 
-    private void Cap(int x) {
-        Object[] temp = new Object[x+elementData.length];
+    private void cap_var_arr(int x) {
+        Object[] temp = new Object[x + elementData.length];
         for (int i = 0; i < Length; i++) {
             temp[i] = elementData[i];
         }
         elementData = temp;
     }
-
-    //NEW arraaylist static var
 
 
     public void remove(int i) {
