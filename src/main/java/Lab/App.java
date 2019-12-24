@@ -43,6 +43,7 @@ public class App {
         }
 
         arr.addArr(temp);
+        arr.add(10,7);
         arr.printfArr();
         System.out.println("size getLength "+arr.getLength());
         // + arr.elementData.toString()

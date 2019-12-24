@@ -13,7 +13,7 @@ public class Arraylist {
     }
 
     public void add(int x, Object e) {
-        cap_var(x+1);
+        cap_var(x+1+Length);
         for (int j = Length - 1; j >= x; j--) {
             elementData[j + 1] = elementData[j];
         }
@@ -34,29 +34,7 @@ public class Arraylist {
             elementData = temp;
         }
     }
-    /*
-    public void add(int i, Object e) {
-        ensureCapacity(Length + 1);
-        for (int j = Length - 1; j >= i; j--) {
-            elementData[j + 1] = elementData[j];
-        }
-        elementData[i] = e;
-        Length++;
-    }
-
-    private void ensureCapacity(int capacity) {
-        if (capacity > elementData.length) {
-            int s = 2 * elementData.length;
-            Object[] arr = new Object[s];
-            for (int i = 0; i < Length; i++) {
-                arr[i] = elementData[i];
-            }
-            elementData = arr;
-        }
-    }
-    */
-
-
+    
     //Arr Arraylist
     public void addArr(Object[] e) {
         cap_var_arr(e.length);
@@ -85,6 +63,7 @@ public class Arraylist {
 
     public void printfArr() {
         for (int i = 0; i < Length; i++) {
+            System.out.printf("%d \t",i);
             System.out.println(elementData[i]);
         }
     }
