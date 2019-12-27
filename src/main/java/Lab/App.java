@@ -13,9 +13,13 @@ public class App {
         int[] itest = {0, 1, 2, 3, 4, 5, 6};
         int[] itest2 = new int[itest.length];
 
-        //new DoubleArray().copyArray(itest);
-
+        /*
+        new DoubleArray().copyArray(itest);
+        DoubleArray arrr = new DoubleArray();
+        arrr.copyArray(itest);
+        */
         //new GenrerateArray().gen(5);
+
 
         //new CountString().count("MARS");
 
@@ -28,6 +32,7 @@ public class App {
         //new GenerateArrayI().gen(3, 1);
 
         Arraylist arr = new Arraylist();
+        /*
         for (int i = 0; i < 5; i++) {
             arr.add(i,i);
         }
@@ -36,16 +41,23 @@ public class App {
 
 
         Object[] temp = new Object[itest.length];
+
         for(int i = 0 ; i < itest.length ; i++)
         {
             temp[i] = itest[i];
             //System.out.println(temp[i]);
         }
 
-        arr.addArr(temp);
+        //arr.addArr(temp);
+        */
+
+        arr.add(12);
+        arr.add(13);
         arr.add(10,7);
         arr.printfArr();
         System.out.println("size getLength "+arr.getLength());
         // + arr.elementData.toString()
+
+
     }
 }

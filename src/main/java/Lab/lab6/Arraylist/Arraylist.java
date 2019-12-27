@@ -18,7 +18,7 @@ public class Arraylist {
             elementData[j + 1] = elementData[j];
         }
         elementData[x] = e;
-        Length++;
+        Length=Length+1+x;
 
 
     }
