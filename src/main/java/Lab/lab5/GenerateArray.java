@@ -1,4 +1,4 @@
-package Lab.test;
+package Lab.lab5;
 
 public class GenerateArray {
     public int[] gen(int n, int x) {
