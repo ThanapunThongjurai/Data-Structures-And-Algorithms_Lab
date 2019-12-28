@@ -9,14 +9,6 @@ public class Arraylist {
     //NEW arraaylist static var
 
 
-    @Override
-    public String toString() {
-        return "Arraylist{" +
-                "elementData=" + Arrays.toString(elementData) +
-                ", size=" + size +
-                '}';
-    }
-
     public void add(Object e) {
         ensureCapacity(size + 1);
         elementData[size] = e;
