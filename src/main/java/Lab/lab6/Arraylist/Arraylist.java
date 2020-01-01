@@ -24,13 +24,23 @@ public class Arraylist {
     }
 
     public void add(int x, Object e) {
-        ensureCapacity(x+size);
+        if (x > size)
+            ensureCapacity(x + 1);
+        else
+            ensureCapacity(size + 1);
         for (int j = size - 1; j >= x; j--) {
             elementData[j + 1] = elementData[j];
         }
         elementData[x] = e;
-        if(size < x)
-            size = x+1;
+        if (size < x)
+            size = x + 1;
+    }
+
+    public void addArr(Object[] e) {
+        //add(i); กลับไปทำแบบ add มา
+        for (int i = 0; i < e.length; i++) {
+            add(e[i]);
+        }
     }
 
     public void ensureCapacity(int x) {
@@ -40,12 +50,6 @@ public class Arraylist {
                 temp[i] = elementData[i];
             }
             elementData = temp;
-        }
-    }
-    public void addArr(Object[] e) {
-        //add(i); กลับไปทำแบบ add มา
-        for (int i = 0; i < e.length; i++) {
-            add(e[i]);
         }
     }
 

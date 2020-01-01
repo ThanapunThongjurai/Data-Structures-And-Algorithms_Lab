@@ -18,7 +18,8 @@ public class App {
 
         test.addArr(otest);
         test.add("+");
-        test.add(15,"+");
+        test.add(4, "+");
+        test.add(15, "+");
         System.out.println(test.toString());
         test.printfArr();
 
