@@ -10,6 +10,17 @@ public class App {
 
         int[] itest = {0, 1, 2, 3, 4, 5, 6};
         int[] itest2 = new int[itest.length];
+        Object[] otest = {0, 1, 2, 3, 4, 5, 6};
+
+        Arraylist test = new Arraylist();
+        test.add("+");
+        test.add("+");
+
+        test.addArr(otest);
+        test.add("+");
+        test.add(15,"+");
+        System.out.println(test.toString());
+        test.printfArr();
 
         /*
         new DoubleArray().copyArray(itest);

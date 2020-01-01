@@ -9,6 +9,14 @@ public class Arraylist {
     //NEW arraaylist static var
 
 
+    @Override
+    public String toString() {
+        return "Arraylist{" +
+                "elementData=" + Arrays.toString(elementData) +
+                ", size=" + size +
+                '}';
+    }
+
     public void add(Object e) {
         ensureCapacity(size + 1);
         elementData[size] = e;
@@ -16,12 +24,13 @@ public class Arraylist {
     }
 
     public void add(int x, Object e) {
-        ensureCapacity(x + 1 + size);
+        ensureCapacity(x+size);
         for (int j = size - 1; j >= x; j--) {
             elementData[j + 1] = elementData[j];
         }
         elementData[x] = e;
-        size = size + 1 + x;
+        if(size < x)
+            size = x+1;
     }
 
     public void ensureCapacity(int x) {
@@ -33,23 +42,11 @@ public class Arraylist {
             elementData = temp;
         }
     }
-
-    //Arr Arraylist
     public void addArr(Object[] e) {
-        //add(0, e[0]); กลับไปทำแบบ add มา
-        cap_var_arr(e.length);
-        for (int i = size; i < size + e.length; i++) {
-            elementData[i] = e[i - size];
+        //add(i); กลับไปทำแบบ add มา
+        for (int i = 0; i < e.length; i++) {
+            add(e[i]);
         }
-        size = size + e.length;
-    }
-
-    private void cap_var_arr(int x) {
-        Object[] temp = new Object[x + elementData.length];
-        for (int i = 0; i < size; i++) {
-            temp[i] = elementData[i];
-        }
-        elementData = temp;
     }
 
 
