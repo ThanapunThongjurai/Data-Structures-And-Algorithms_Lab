@@ -10,7 +10,8 @@ public class tset {
         A.add(5,6);
         A.add(3,6);
         A.add(6);
-        //A.remove(5);
+        A.add(9,6);
+        A.remove(9);
         A.printfArr();
         A.toString();
     }

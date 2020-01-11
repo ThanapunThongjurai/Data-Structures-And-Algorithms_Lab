@@ -9,11 +9,11 @@ public class Arraylist {
 
     //NEW arraaylist static var
 
-    public  Arraylist()
-    {
+    public Arraylist() {
 
 
     }
+
     @Override
     public String toString() {
         return "Arraylist{" +
@@ -24,18 +24,20 @@ public class Arraylist {
 
     public void add(int x, Object e) {
         if (x > size)
-            ensureCapacity(x + 1);
+            ensureCapacity(x + 1);//สร้างกล่อง
         else
             ensureCapacity(size + 1);
 
-
-        for (int j = x - 1; j >= x; j--) {
+        for (int j = size - 1; j >= x; j--) {
             elementData[j + 1] = elementData[j];
         }
         if (size <= x)
             size = x + 1;
         elementData[x] = e;
     }
+
+
+
 
 
     public void ensureCapacity(int x) {
