@@ -5,23 +5,8 @@ import java.util.Arrays;
 public class Arraylist {
     private Object[] elementData = new Object[1];
     private int size = 0;
-    boolean firstUse = true;
 
     //NEW arraaylist static var
-
-    public Arraylist() {
-
-
-    }
-
-    @Override
-    public String toString() {
-        return "Arraylist{" +
-                "elementData=" + Arrays.toString(elementData) +
-                ", size=" + size +
-                '}';
-    }
-
     public void add(int x, Object e) {
         if (x > size)
             ensureCapacity(x + 1);//สร้างกล่อง
@@ -36,10 +21,6 @@ public class Arraylist {
         elementData[x] = e;
     }
 
-
-
-
-
     public void ensureCapacity(int x) {
         if (size < x) {
             Object[] temp = new Object[x];
@@ -49,7 +30,6 @@ public class Arraylist {
             elementData = temp;
         }
     }
-
 
     public void remove(int i) {
         for (int j = i; j < size - 1; j++) {

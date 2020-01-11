@@ -8,7 +8,7 @@ import Lab.lab6.Arraylist.Arraylist;
  */
 public class App {
     public static void main(String[] args) {
-
+    /*
         int[] itest = {0, 1, 2, 3, 4, 5, 6};
         int[] itest2 = new int[itest.length];
         Object[] otest = {0, 1, 2, 3, 4, 5, 6};
