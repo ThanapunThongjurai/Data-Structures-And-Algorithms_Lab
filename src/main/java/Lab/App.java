@@ -1,5 +1,6 @@
 package Lab;
 
+import Lab.lab5.*;
 import Lab.lab6.Arraylist.Arraylist;
 
 /**
@@ -23,6 +24,7 @@ public class App {
         System.out.println(test.toString());
         test.printfArr();
 
+        CopyArray Tets =  new CopyArray();
         /*
         new DoubleArray().copyArray(itest);
         DoubleArray arrr = new DoubleArray();

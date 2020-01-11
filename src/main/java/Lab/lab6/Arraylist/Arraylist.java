@@ -5,10 +5,15 @@ import java.util.Arrays;
 public class Arraylist {
     private Object[] elementData = new Object[1];
     private int size = 0;
+    boolean firstUse = true;
 
     //NEW arraaylist static var
 
+    public  Arraylist()
+    {
 
+
+    }
     @Override
     public String toString() {
         return "Arraylist{" +
@@ -17,31 +22,21 @@ public class Arraylist {
                 '}';
     }
 
-    public void add(Object e) {
-        ensureCapacity(size + 1);
-        elementData[size] = e;
-        size++;
-    }
-
     public void add(int x, Object e) {
         if (x > size)
             ensureCapacity(x + 1);
         else
             ensureCapacity(size + 1);
-        for (int j = size - 1; j >= x; j--) {
+
+
+        for (int j = x - 1; j >= x; j--) {
             elementData[j + 1] = elementData[j];
         }
-        elementData[x] = e;
-        if (size < x)
+        if (size <= x)
             size = x + 1;
+        elementData[x] = e;
     }
 
-    public void addArr(Object[] e) {
-        //add(i); กลับไปทำแบบ add มา
-        for (int i = 0; i < e.length; i++) {
-            add(e[i]);
-        }
-    }
 
     public void ensureCapacity(int x) {
         if (size < x) {
@@ -67,6 +62,18 @@ public class Arraylist {
             System.out.printf("%d \t", i);
             System.out.println(elementData[i]);
         }
+    }
+
+    public void addArr(Object[] e) {
+        for (int i = 0; i < e.length; i++) {
+            add(e[i]);
+        }
+    }
+
+    public void add(Object e) {
+        ensureCapacity(size + 1);
+        elementData[size] = e;
+        size++;
     }
 
     public int getSize() {
