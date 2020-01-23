@@ -16,9 +16,9 @@ public class Arraylist {
         for (int j = size - 1; j >= x; j--) {
             elementData[j + 1] = elementData[j];
         }
+        elementData[x] = e;
         if (size <= x)
             size = x + 1;
-        elementData[x] = e;
     }
 
     public void ensureCapacity(int x) {
@@ -58,8 +58,24 @@ public class Arraylist {
         size++;
     }
 
-    public int getSize() {
+    public int size() {
         return size;
+    }
+
+    public Object get(int i) {
+        return elementData[i];
+    }
+
+    public boolean contains(Object e){
+        boolean check = false;
+        for(int i = 0; i < size ; i++)
+        {
+            if(e == elementData[i])
+            {
+                check = true;
+            }
+        }
+        return check;
     }
 
     public Object getdataPorintI(int x) {
