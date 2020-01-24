@@ -19,6 +19,8 @@ public class Arraylist {
         elementData[x] = e;
         if (size <= x)
             size = x + 1;
+        else
+            size++;
     }
 
     public void ensureCapacity(int x) {
