@@ -40,12 +40,8 @@ public class ArrayListQueue {
         }
     }
 
-    public boolean isFull() {
-        if (lst.size() > 0) {
-            return true;
-        } else {
-            return false;
-        }
+    public void clear() {
+        lst.clear();
     }
 }
 
