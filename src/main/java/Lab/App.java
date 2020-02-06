@@ -42,13 +42,15 @@ public class App {
 
         //new GenerateArrayI().gen(3, 1);
 
-        /*
+
         Arraylist arr = new Arraylist();
-        arr.add("x");
-        arr.add("y");
-        arr.add("z");
-        System.out.println(arr);
-*/
+        arr.add(10,5);
+        arr.add(5,3);
+        arr.add(0,"e");
+        System.out.println(arr.toString());
+        arr.remove(0);
+        System.out.println(arr.toString());
+
     }
 
 

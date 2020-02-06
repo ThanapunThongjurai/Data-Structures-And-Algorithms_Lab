@@ -6,6 +6,14 @@ public class Arraylist {
     private Object[] elementData = new Object[1];
     private int size = 0;
 
+    @Override
+    public String toString() {
+        return "Arraylist{" +
+                "elementData=" + Arrays.toString(elementData) +
+                ", size=" + size +
+                '}';
+    }
+
     //NEW arraaylist static var
     public void add(int x, Object e) {
         if (x > size)
@@ -13,7 +21,7 @@ public class Arraylist {
         else
             ensureCapacity(size + 1);
 
-        for (int j = size - 1; j >= x; j--) {
+        for (int j = size-1 ; j >= x; j--) {
             elementData[j + 1] = elementData[j];
         }
         elementData[x] = e;
@@ -75,6 +83,7 @@ public class Arraylist {
             if(e == elementData[i])
             {
                 check = true;
+                i=size;
             }
         }
         return check;

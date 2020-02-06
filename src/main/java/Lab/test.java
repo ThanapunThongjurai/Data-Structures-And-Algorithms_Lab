@@ -25,7 +25,6 @@ public class test {
         a.dequeue();
         System.out.println(a.toString());
         System.out.println(a.isEmpty());
-        System.out.println(a.isFull());
     }
 
 }
