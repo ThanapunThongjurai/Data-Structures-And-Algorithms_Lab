@@ -1,8 +1,7 @@
 package Lab;
 
-import Lab.lab6.Arraylist.Arraylist;
-import Lab.lab7.Stack.ArrayListQueue;
-import Lab.lab7.Stack.ArrayListStack;
+import Lab.lab8.PQ.ArrayListPriorityQueue;
+import Lab.lab8.PQ.Employee;
 
 public class test {
     public static void main(String[] args) {
@@ -17,6 +16,7 @@ public class test {
         System.out.println(a.toString());
         */
 
+        /*
         ArrayListQueue a = new ArrayListQueue();
         a.enqueue(1);
         a.enqueue(2);
@@ -25,6 +25,18 @@ public class test {
         a.dequeue();
         System.out.println(a.toString());
         System.out.println(a.isEmpty());
+         */
+        ArrayListPriorityQueue max = new ArrayListPriorityQueue();
+        Employee a = new Employee("001", "T", "T", 0, 10000);
+        max.enqueue(a);
+
+        Employee b = new Employee("002", "T", "T", 0, 20000);
+        max.enqueue(b);
+
+        Employee maxObj = (Employee) max.peek();
+        System.out.println(maxObj.getSalary());
+
     }
+
 
 }
