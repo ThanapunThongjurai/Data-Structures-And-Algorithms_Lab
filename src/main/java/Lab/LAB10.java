@@ -16,10 +16,10 @@ public class LAB10 {
         set.add(new Product("2", "1", "1", 12));
         System.out.println("set : " + set);
 
-        Map<Integer,String> map = new HashMap<Integer,String>();
-        map.put(2,"a");
-        map.put(1,"b");
-        map.put(3,"c");
+        Map<String,Product> map = new HashMap<String,Product>();
+        map.put("a",new Product("1", "1", "1", 12));
+        map.put("b",new Product("1", "1", "1", 12));
+        map.put("c",new Product("1", "1", "1", 12));
         System.out.println("map : "+map);
     }
 }
